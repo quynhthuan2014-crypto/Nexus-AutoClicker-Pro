@@ -1,0 +1,11 @@
+# Compiler and linker output
+*.obj
+*.lib
+*.exp
+*.pdb
+*.ilk
+*_stub.dll
+
+# Logs and temporary files
+*.log
+*.tmp
