@@ -6,9 +6,8 @@
 
 ## Tải xuống
 
-- **[NexusAutoClicker_Pro.exe](./NexusAutoClicker_Pro.exe)** — ứng dụng Windows 64-bit, tải trực tiếp.
-- **[NexusAutoClicker_Pro.zip](./NexusAutoClicker_Pro.zip)** — gói đầy đủ gồm EXE, mã nguồn và tệp build.
-- [Mã nguồn chính: NexusAutoClicker.c](./NexusAutoClicker.c)
+- **[NexusAutoClicker_Pro.zip](./NexusAutoClicker_Pro.zip)** — gói tải xuống chính thức, gồm EXE Windows 64-bit, mã nguồn C, script build và các tệp định nghĩa import.
+- Mã nguồn chính `NexusAutoClicker.c` nằm bên trong thư mục `NexusAutoClicker_Pro/` sau khi giải nén gói ZIP.
 
 ## Tính năng có trong mã nguồn
 
@@ -31,9 +30,9 @@ Luồng click sử dụng QueryPerformanceCounter để theo dõi thời gian hi
 
 ## Hướng dẫn sử dụng
 
-1. Tải EXE hoặc ZIP từ phần **Tải xuống**.
-2. Nếu tải ZIP, giải nén toàn bộ vào một thư mục riêng.
-3. Chạy `NexusAutoClicker_Pro.exe`. Nếu Windows hiển thị cảnh báo, hãy kiểm tra nguồn tải và quét tệp trước khi chọn chạy.
+1. Tải `NexusAutoClicker_Pro.zip` từ phần **Tải xuống**.
+2. Giải nén toàn bộ ZIP vào một thư mục riêng để giữ nguyên cấu trúc gói.
+3. Mở thư mục `NexusAutoClicker_Pro/` vừa giải nén và chạy `NexusAutoClicker_Pro.exe`. Nếu Windows hiển thị cảnh báo, hãy kiểm tra nguồn tải và quét tệp trước khi chọn chạy.
 4. Chọn **Nút chuột** và **Kiểu click**.
 5. Chọn **Lặp số lần** rồi nhập số chu kỳ, hoặc chọn **Lặp đến khi dừng**.
 6. Nhập tốc độ trong khoảng 1–2.000 CPS.
@@ -59,8 +58,8 @@ Giao diện có nút **Record & Playback**. Phần ghi sử dụng low-level mou
 
 | Tệp | Mục đích |
 |---|---|
-| `NexusAutoClicker_Pro.exe` | Bản chạy Windows 10/11 x64 |
-| `NexusAutoClicker.c` | Mã nguồn C sử dụng Win32 API |
+| `NexusAutoClicker_Pro.zip` | Gói phát hành đầy đủ, bao gồm EXE và mã nguồn C |
+| `NexusAutoClicker.c` (trong ZIP) | Mã nguồn C sử dụng Win32 API |
 | `build_exe.bat` | Script biên dịch và link trên Windows |
 | `kernel32.def` | Danh sách import từ KERNEL32.dll |
 | `user32.def` | Danh sách import từ USER32.dll |
@@ -79,7 +78,7 @@ Giao diện có nút **Record & Playback**. Phần ghi sử dụng low-level mou
 ### Các bước
 
 1. Tải repository về máy hoặc giải nén `NexusAutoClicker_Pro.zip`.
-2. Mở Command Prompt trong thư mục có `build_exe.bat`.
+2. Mở thư mục `NexusAutoClicker_Pro/` bên trong ZIP; mã nguồn `NexusAutoClicker.c`, các tệp `.def` và `build_exe.bat` nằm cùng cấp.
 3. Chạy:
 
 ```bat
@@ -95,7 +94,7 @@ Các tệp `.obj`, `.lib` và DLL stub sinh ra trong quá trình build là tệp
 Trên Windows PowerShell:
 
 ```powershell
-Get-FileHash .\NexusAutoClicker_Pro.exe -Algorithm SHA256
+Get-FileHash .\NexusAutoClicker_Pro\NexusAutoClicker_Pro.exe -Algorithm SHA256
 Get-FileHash .\NexusAutoClicker_Pro.zip -Algorithm SHA256
 ```
 
