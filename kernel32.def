@@ -1,0 +1,15 @@
+LIBRARY KERNEL32.dll
+EXPORTS
+ GetModuleHandleW
+ CreateThread
+ CloseHandle
+ WaitForSingleObject
+ Sleep
+ GetCurrentThread
+ SetThreadPriority
+ CreateWaitableTimerExW
+ SetWaitableTimer
+ QueryPerformanceCounter
+ QueryPerformanceFrequency
+ GetTickCount
+ ExitProcess
